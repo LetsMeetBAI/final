@@ -1,12 +1,3 @@
-var config = {
-    apiKey: "AIzaSyAxteQnfJWDilWg9SoCPX9kpB3RkTutde4",
-    authDomain: "letmeet-bai.firebaseapp.com",
-    databaseURL: "https://letmeet-bai.firebaseio.com",
-    projectId: "letmeet-bai",
-    storageBucket: "letmeet-bai.appspot.com",
-    messagingSenderId: "688044304067"
-  };
-  firebase.initializeApp(config);
 var app = {
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -102,16 +93,6 @@ function showuserevents(){
 	document.getElementById("user_div").style.display = "none";
 	document.getElementById("show_events").style.display = "block";
 	
-	/*
-	var database = firebase.database();
-	var userId = firebase.auth().currentUser.uid;
-	return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-	var usermeetings = (snapshot.val() && snapshot.val().Meetings) || 'brak';
-	var userevents = (snapshot.val() && snapshot.val().Events) || 'brak';
-	document.getElementById("usermeetings").innerHTML=usermeetings;
-	document.getElementById("userevents").innerHTML=userevents;
-	});
-	*/
 	var database = firebase.database();
 	var userId = firebase.auth().currentUser.uid;
 	var user = firebase.auth().currentUser;
