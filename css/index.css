@@ -1,0 +1,312 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;                               /* обнуляем отступы и убираем бордюры */
+  vertical-align: baseline;          /* приводим все к одной базовой линии */
+  background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+  font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                            /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  outline:none;
+}
+table {           /* устраняем отступы между ячейками таблицы */
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td, td img {
+  vertical-align: top;      /* возвращаем привычное вертикальное выравнивание */
+}
+input, select, button, textarea {
+  margin: 10px 20px;        /* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+  font-size: 100%;      /* делаем размер шрифтов везде одинаковым */
+  outline: none;
+  border:1px solid #d3d3d3;
+  border-radius:5.5px;
+  width:274px;
+  height:44px;
+  padding: 0px 20px;
+
+}
+textarea {
+  padding: 10px 20px;
+  height: 100px;         /* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] {    /* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+  vertical-align: bottom;
+}
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display:block;
+}
+nav ul {
+   list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+  min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+  color: #7e7f84;
+  text-align: left;
+  font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+  min-height:100%;
+  font-family: 'Noto Sans', sans-serif;
+
+      -webkit-font-smoothing: antialiased;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+  color: #f45a40;
+  text-decoration: none;
+}
+a:hover {
+  color: #f45a40;
+  text-decoration:none;
+}
+a:focus, a:active {
+  color: #f45a40;
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+  font-weight:normal;
+}
+
+.clr{
+  clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+
+
+/* --------------- мои настройки ---------*/
+
+h1 {
+  font-family:NotoSans-Bold;
+font-size:35px;
+color:#267dce;
+text-align:center;
+}
+
+.main-div h1 {
+  margin-bottom: 30px;
+}
+img{
+  margin: 20px;
+  max-width:100%;
+}
+
+.main_wrap{
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.main-div {
+  margin-top: 150px;
+}
+
+.btn {
+  background:#267dce;
+  box-shadow:0 4px 14px 0 rgba(38,125,206,0.43);
+  border-radius:10px;
+  width:250px;
+  height:50px;
+  color:#fff;
+  margin: 10px 20px;
+  transition: ease all 0.4s;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow:none;
+  transition: ease all 0.4s;
+}
+.btn:active{
+  background:#1E609D;
+  transition: ease all 0.4s;
+}
+
+.loggedin-div {
+ /* border: 1px red solid;*/
+  margin-top: 80px;
+}
+
+#user_div {
+  margin-top: 100px;
+}
+.card {
+  background:#ffffff;
+  box-shadow:0 10px 25px 0 rgba(0,0,0,0.15);
+  border-radius:16px;
+  width:320px;
+  height:auto;
+  display: inline-block;
+  margin: 10px 10px;
+  padding-top: 40px;
+  transition: ease all 0.4s; 
+}
+.card:hover{
+  box-shadow: none;
+  transition: ease all 0.4s;
+}
+.card-top{
+  margin-bottom: 20px;
+  
+}
+.card p {
+  margin: 20px 40px; 
+}
+.stickhead {
+  background:#ffffff;
+  box-shadow:0 10px 25px 0 rgba(0,0,0,0.15);
+  width:100%;
+  height:65px;
+  position: fixed;
+  top:0px;
+}
+.stickhead a{
+  float: right;
+  padding: 23px;
+  
+  line-height: 20px;
+  color:#4a4a4a;
+  transition: ease all 0.4s;
+}
+
+.stickhead a:hover{
+  background:#eee;
+  transition: ease all 0.4s;
+}
+
+.stickhead a img{
+  margin: 0px;
+  margin-right: 10px;
+
+}
+
+.showpage{
+  background:#ffffff;
+  box-shadow:0 10px 25px 0 rgba(0,0,0,0.15);
+  border-radius:16px;
+  width:auto;
+  height:auto;
+  margin: 10px 10px;
+  padding-top: 40px;
+  transition: ease all 0.4s;
+  border-spacing: 2cm;
+  border-style:double;
+}
+
+#test12 {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  border-radius:16px;
+  box-shadow:0 10px 25px 0 rgba(0,0,0,0.15);
+  width:320px;
+  height:auto;
+  display: inline-block;
+  margin: 20px 20px;
+  padding-top: 30px;
+  transition: ease all 0.4s; 
+  width:auto;
+  height:auto;
+  text-align: center;
+  text-transform: none;
+  
+}
+
+#test12 p{
+
+  background-image: linear-gradient(to right, blue, black);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+  line-height: 30px;
+  
+  
+  
+}
+
+.result-list{
+  background: #fbffea;
+}
+
+.user_di{
+  background: linear-gradient( 90deg,
+      rgba(0,0,0,.1) 30%, rgba(0,0,0,0) 30%),
+    linear-gradient( 
+      rgba(255,255,0,.8), rgba(255,255,255,0));
+    background-size: 2em 2em, 100%;
+    background-color: yellowgreen;
+    color: rgb(217, 54, 250);
+  border-radius:16px;
+  box-shadow:0 10px 25px 0 rgba(0,0,0,0.15);
+}
+
+.main-user{
+  background: #dadce4;
+  box-shadow:0 10px 25px 0 rgba(0,0,0,0.15);
+  border-radius:16px;
+  width:500px;
+  height:auto;
+  display: inline-block;
+  margin: 10px auto;
+  padding-top: 40px;
+  transition: ease all 0.4s; 
+}
+/* .tabelkaevent{
+  background: rgb(211, 255, 190);
+  box-shadow:0 10px 25px 0 rgba(0,0,0,0.15);
+  border-radius:16px;
+  width:320px;
+  height:auto;
+  display: inline-block;
+  margin: 20px 20px;
+  padding-top: 30px;
+  transition: ease all 0.4s; 
+  width:auto;
+  height:auto;
+  text-align: center;
+  text-transform: none;
+  border: #267dce
+
+} */
+/* .tabelkaevent p{
+
+  background-image: linear-gradient(to right, blue, black);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+} */
+/*#set {
+  background-image: url(img/set.png);
+  display: block;
+  margin: 0 auto;
+}*/
+
