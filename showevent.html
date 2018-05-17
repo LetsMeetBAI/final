@@ -1,0 +1,65 @@
+<html>
+<head>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>	
+	<script type='text/javascript' > 
+  var klucz = false; 
+</script>
+		<meta http-equiv="Content-Security-Policy" content="script-src * data: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		
+		<title>LetsMeet</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="manifest" href="/manifest.json">
+		<script>window.onload = showmeetings;</script>
+</head>
+<body>
+	<div class="stickhead">
+		<a onclick="userinfopage()"><img src="img/set.png" alt="">Settings</a>
+		<a onclick="logout()"><img src="img/user.png" alt="">log out</a>
+		<a onclick="toindexpage()">Main Page</a>
+	</div> 
+ 	<div id="login_div" class="main-div">
+    	<h1>Let's Meet!</h1>
+    	<button onclick="login()">Login to Account</button>
+  	</div>
+	<div id="user_div" class="loggedin-div">
+    	<h1>Lets Meet!</h1>
+		<p id="user_para"></p>
+		<br></br>
+		<br></br>
+			<h1>Nadchodzące wydarzenia!</h1>
+	 		<div id="tabelkaevent" class="tabelkaevent";>
+			</div>
+			<br></br>
+			<h1>Dostępne spotkania!</h1>
+			<div id="tabelkam" class="tabelkam";>
+			</div>
+</body>
+<script>
+$(document).ready(function(){
+
+    // code to read selected table row cell data (values).
+    $("#tabelkaevent").on('click','.btn',function(){
+ 
+		
+		var data = $(this).closest('p').prev().text();
+		console.log(data);
+		attendevent(data);
+    });
+	$("#tabelkam").on('click','.btn',function(){
+		var data = $(this).closest('p').prev().text();
+		console.log(data);
+		attendmeeting(data);
+    });
+});
+</script>
+</html>

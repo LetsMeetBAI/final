@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<meta http-equiv="Content-Security-Policy" content="script-src * data: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<script src="js/index.js"></script>
+		
+		<title>LetsMeet</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="manifest" href="/manifest.json">
+		<script>window.onload = editprofajl;</script>
+	</head>
+<body>
+ 	
+  	<div id="login_div" class="main-div">
+    	<button id="tologinbtn">Login to Account</button>
+	 </div>
+	</div>
+	<div class="stickhead">
+	   <a onclick="userinfopage()"><img src="img/set.png" alt="">Settings</a>
+	   <a onclick="logout()"><img src="img/user.png" alt="">log out</a>
+	   <a onclick="toindexpage()">Main Page</a>
+   	</div> 
+
+	<div class="main_wrap"> 
+	<div class="main-user">
+	<div id="edituser_div" class="main-div">
+		<p id="user_para"></p>
+		<h4></h4>
+		<input type="text" placeholder="Nazwa użytkownika" id="UserName"  />
+		<p></p>
+		<select id="sex">
+			<option style="display:none;" selected>Wybierz płeć</option>
+    		<option>Kobieta</option>
+			<option>Mężczyzna</option>
+		</select>
+		<p>Wybierz języki z poniższej listy:</p>
+		<select multiple= "multiple" id="languages">
+    		<option>Polski</option>
+			<option>Angielski</option>
+			<option>Niemiecki</option>
+			<option>Francuski</option>
+			<option>Hiszpański</option>
+			<option>Portugalski</option>
+			<option>Rosyjski</option>
+		</select>
+		<p>Wybierz hobby z poniższej listy:</p>
+		<select multiple= "multiple" id="hobby">
+			<option>muzyka</option>
+			<option>film</option>
+			<option>imprezy</option>
+			<option>sporty drużynowe</option>
+			<option>bieganie</option>
+			<option>podróże</option>
+			<option>taniec</option>
+		</select>
+		<p></p>
+		<button onclick="userinfo()" class="btn">Zapisz zmiany</button>
+		<p></p>
+		<button onclick="userinfopage()" class="btn">Back</button>
+		<p></p>
+		</div>											
+	
+	<div id="showuser_div" class="loggedin-div">
+		Nazwa użytkownika: <b id="username_profile"></b><br></br>
+		Płeć: <b id="płeć_profile"></b><br></br>
+		Zainteresowania: <b id="hobby_profile"></b><br></br>
+		Języki: <b id= "języki_profile"></b><br></br>
+		
+		
+		<button onclick="edituserinfo()" class="btn">Edytuj profil</button>
+		</div>
+		
+	<div id="show_events" class="loggedin-div">
+		<h1><b>Meetingi:</b></h1>
+		<div id="tabelmeet" class="tabelmeet";>
+			</div>
+		<h1><b>Wydarzenia:</b></h1>
+		
+		<div id="tabelev" class="tabelev";>
+			</div>
+	</div>
+	<div id="user_div" class="loggedin-div">
+		<button onclick="showuserevents()" class="btn">Pokaż wydarzenia w których biorę udział</button>
+		<p></p>
+		<button onclick="showuserinfo()" class="btn">Pokaż ustawienia profilu</button>
+		<p></p>
+	</div>
+	</div>
+	</div>
+    <script type="text/javascript" src="js/index.js"></script>
+	</body>
+</html>
